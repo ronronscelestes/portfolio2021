@@ -8,11 +8,16 @@
     src: url('./fonts/DINPro400.otf') format('OpenType');
 }
 
+@font-face {
+    font-family: 'Din Pro 500';
+    src: url('./fonts/DINPro-Medium.otf') format('OpenType');
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Din Pro 400';
+    font-family: 'Din Pro 400', sans-serif;
 }
 
 :root {
@@ -21,7 +26,7 @@
 
   --heading01: 64px;
   --subtitle01-link: 17px;
-  --subtitle02: 12px; 
+  --subtitle02: 14px; 
   --paragraph: 22px;
 }
 
@@ -35,7 +40,7 @@ body {
     overflow-y: scroll;
     height: 100vh;
     scroll-snap-type: y mandatory;
-    color: rgb(230, 218, 207)
+    color: rgb(230, 218, 207);
 }
 
 /* background effect */
@@ -103,7 +108,7 @@ body {
 
 #header {
     transform: translateY(-20%);
-    max-width: 70%;
+    /* max-width: 80%; */
     animation: appear 2s ease-in-out;
 }
 
@@ -130,6 +135,7 @@ body {
 } 
 
 #header p:nth-child(3) {
+    font-family: 'Din Pro 500', sans-serif;
     font-size: var(--subtitle01-link);
     line-height: 22px;
     opacity: 0.72;
@@ -173,7 +179,7 @@ section {
 
 section h2 {
 	opacity: 0;
-    font-family: 'Inknut Antiqua';
+    font-family: 'Inknut Antiqua', Georgia, 'Times New Roman', Times, serif;
     font-size: var(--heading01);
     line-height: 110%;
     letter-spacing: -0.025em;
@@ -219,9 +225,8 @@ video {
     border-radius: 24px;
     transform: matrix(0.98, -0.1, 0.2, 0.99, 0, 0);
     margin-right: 90px;
+    /* box-shadow: 0 12px 60px rgba(0, 0, 0, 0.72); */
 }
-
-/* translate(calc(var(--cursorX)/50), calc(var(--cursorY)/15)) */
 
 section.movefromleft video, section.movefromright video {
     animation: video-text 0.8s ease-out; 
@@ -250,7 +255,7 @@ aside:not(#header) {
 
 aside h3 {
     font-size: var(--paragraph);
-    line-height: 110%;
+    line-height: 28px;
     letter-spacing: -0.025em;
     color: rgba(230, 218, 207, 0.7);
     margin-bottom: 40px;
@@ -270,7 +275,8 @@ aside .link-github {
 }
 
 aside .link-github img {
-    margin-right: 12px;
+    margin-right: 8px;
+    width: 18px;
 }
 
 aside .link-github::before {
@@ -358,13 +364,14 @@ aside .link-github:hover::before {
 
 #contact div:last-of-type p {
     position: absolute;
-    top: 40px;
-    left: 26px;
+    top: 45px;
+    left: 22px;
     opacity: 0;
     font-size: 12px;
 }
 
 .copied {
+    text-transform: uppercase;
     animation: copied 1s ease-in-out;
 }
 
@@ -384,15 +391,17 @@ aside .link-github:hover::before {
         --paragraph: 16px;
     }
 
+    #header {
+        transform: initial;
+    }
+
     #hello-hand {
         max-width: 150px;
-        top: -5%;
-        margin-bottom: 40px;
+        position: initial;
         order: -1;
     } 
 
     #line {
-        background: linear-gradient(360deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 7.92%, #FFFFFF 93.34%, rgba(255, 255, 255, 0) 100%);
         opacity: 0.2;
     }
 
@@ -448,9 +457,9 @@ aside .link-github:hover::before {
 
     #contact div p {
         width: 100%;
-        margin-bottom: 0;
+        margin-bottom: 16px;
         padding: 0;
-        font-size: 14px;
+        font-size: 15px;
     }
 
     #contact div p:last-of-type {
@@ -496,9 +505,4 @@ aside .link-github:hover::before {
         align-items: center;
         margin: 0 20px;
     }
-
-    #contact div p:last-of-type {
-        margin-bottom: 20px;
-    }
-
 }

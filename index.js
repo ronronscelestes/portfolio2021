@@ -40,6 +40,7 @@ const callback = entries => {
                 childrenOne.play();
             } else if(childrenTwo && childrenTwo.tagName === 'VIDEO') {
                 childrenTwo.play();
+
             }
 
         } else {
