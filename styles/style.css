@@ -18,6 +18,11 @@
 :root {
   --cursorX: 50vw;
   --cursorY: 50vh;
+
+  --heading01: 64px;
+  --subtitle01-link: 17px;
+  --subtitle02: 12px; 
+  --paragraph: 22px;
 }
 
 html {
@@ -30,7 +35,7 @@ body {
     overflow-y: scroll;
     height: 100vh;
     scroll-snap-type: y mandatory;
-    color: #E6DACF
+    color: rgb(230, 218, 207)
 }
 
 /* background effect */
@@ -98,24 +103,37 @@ body {
 
 #header {
     transform: translateY(-20%);
-    min-width: 55%;
+    max-width: 70%;
+    animation: appear 2s ease-in-out;
 }
 
-#header h1, #contact p:nth-child(1) {
-    font-size: 12px;
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+}
+
+#header h1, #header p {
+    font-size: var(--subtitle02);
     line-height: 15px;
     text-transform: uppercase;
-    color: rgba(230, 218, 207, 0.7);
+}
+
+#header h1 {
+    opacity: 0.7;
     margin-bottom: 24px;
 }
 
 #header p {
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: #E6DACF;
     opacity: 0.34;
     margin-top: 24px;
+} 
+
+#header p:nth-child(3) {
+    font-size: var(--subtitle01-link);
+    line-height: 22px;
+    opacity: 0.72;
+    max-width: 588px;
 } 
 
 #hello-hand {
@@ -156,7 +174,7 @@ section {
 section h2 {
 	opacity: 0;
     font-family: 'Inknut Antiqua';
-    font-size: 64px;
+    font-size: var(--heading01);
     line-height: 110%;
     letter-spacing: -0.025em;
     margin-bottom: 16px;
@@ -222,18 +240,8 @@ aside:not(#header) {
     max-width: 347px;
 }
 
-#header {
-    animation: appear 2s ease-in-out;
-}
-
-@keyframes appear {
-    0% {
-        opacity: 0;
-    }
-}
-
 aside h3 {
-    font-size: 20px;
+    font-size: var(--paragraph);
     line-height: 110%;
     letter-spacing: -0.025em;
     color: rgba(230, 218, 207, 0.7);
@@ -243,48 +251,84 @@ aside h3 {
 aside .link-github {
     display: flex;
     align-items: center;
-}
-
-aside .link-github img {
-    margin-right: 12px;
-}
-
-aside .link-github {
     text-decoration: none;
-    font-size: 16px;
+    font-size: var(--subtitle01-link);
     line-height: 110%;
     letter-spacing: -0.025em;
     text-transform: uppercase;
     color: #FFF1E5;
 }
 
+aside .link-github img {
+    margin-right: 12px;
+}
+
 #contact {
     flex-direction: column;
+    align-items: flex-start;
+    margin: 0 150px;
 }
 
-#contact p, #contact a {
+#contact h2 {
+    font-size: 46px;
+}
+
+#contact div {
+    display: flex;
+}
+
+#contact div p {
+    width: 50%;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -0.025em;
     color: rgba(230, 218, 207, 0.7);
+    padding-left: 30px;
+    margin-bottom: 80px;
 }
 
-#contact p a {
-    text-decoration: underline;
-}
-
-#contact p:nth-child(1) {
+#contact > p:first-of-type {
+    font-size: var(--subtitle01-link);
+    line-height: 22px;
+    text-transform: uppercase;
+    color: rgba(230, 218, 207, 1);
     margin-bottom: 16px;
 }
 
-#contact p:nth-child(3) {
-    font-size: 24px;
-    line-height: 110%;
-    text-align: center;
-    letter-spacing: -0.025em;
+#contact div p:first-child {
+    padding-right: 15px;
+    padding-left: 0;
+}
+
+#contact > p:last-of-type {
+    font-size: var(--subtitle02);
+    line-height: 15px;
+    text-transform: uppercase;
+    color: rgba(230, 218, 207, 0.72);
+    margin-bottom: 16px;
+}
+
+#contact div a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid rgba(230, 218, 207, 0.48);
+    margin-right: 16px;
 }
 
 @media (max-width: 1000px) {
+    :root {
+        --heading01: 34px;
+        --subtitle01-link: 12px;
+        --paragraph: 16px;
+    }
+
     #hello-hand {
         max-width: 150px;
-        top: 0;
+        top: -5%;
         margin-bottom: 40px;
         order: -1;
     } 
@@ -302,10 +346,6 @@ aside .link-github {
         text-align: center;
     }
 
-    section h2 {
-        font-size: 42px;
-    }
-
     aside {
         width: 100%;
     }
@@ -318,7 +358,6 @@ aside .link-github {
     }
 
     aside h3 {
-        font-size: 16px;
         margin-bottom: 30px;
     }
 
@@ -334,9 +373,41 @@ aside .link-github {
     .left video {
         order: -1;
     }
+
+    #contact {
+        align-items: center;
+        margin: 0 100px;
+    }
+
+    #contact h2 {
+        font-size: 36px;
+    }
+
+    #contact div:not(:last-child) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact div p {
+        width: 100%;
+        margin-bottom: 0;
+        padding: 0;
+        font-size: 14px;
+    }
+
+    #contact div p:last-of-type {
+        margin-bottom: 40px;
+    }
+
 }
 
 @media (max-width: 425px) {
+    :root {
+        --heading01: 28px;
+        --subtitle01-link: 12px;
+        --paragraph: 14px;
+    }
+
     #hello-hand {
         max-width: 80px;
     } 
@@ -355,12 +426,17 @@ aside .link-github {
         margin-bottom: 15%;
     }
 
-    #contact p:nth-child(3) {
-        font-size: 16px;
-    }
-
     aside .link-github {
         font-size: 12px;
+    }
+
+    #contact {
+        align-items: center;
+        margin: 0 20px;
+    }
+
+    #contact div p:last-of-type {
+        margin-bottom: 20px;
     }
 
 }
