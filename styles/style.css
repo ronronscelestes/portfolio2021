@@ -27,7 +27,7 @@ html {
 }
 
 body {
-    overflow: scroll;
+    overflow-y: scroll;
     height: 100vh;
     scroll-snap-type: y mandatory;
     color: #E6DACF
