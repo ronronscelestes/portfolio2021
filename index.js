@@ -79,3 +79,17 @@ handPicture.addEventListener('mouseenter', () => {
         handPicture.style.animation = '';
     }, 1600)
 })
+
+//COPY CV-RESUME
+const resume = document.querySelector('#resume');
+const copiedNode = document.querySelector('#contact div:last-of-type p');
+
+resume.addEventListener('click', (e) => {
+    e.preventDefault();
+    copiedNode.classList.add('copied');
+    setTimeout(() => {
+        copiedNode.className = '';
+    }, 1000);
+
+    navigator.clipboard.writeText('julie.plantey@gmail.com');
+})

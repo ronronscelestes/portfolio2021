@@ -217,9 +217,11 @@ video {
     width: 40%;
     min-width: 200px;
     border-radius: 24px;
-    transform: matrix(0.98, -0.1, 0.2, 0.99, 0, 0) translate(calc(var(--cursorX)/50), calc(var(--cursorY)/15));
+    transform: matrix(0.98, -0.1, 0.2, 0.99, 0, 0);
     margin-right: 90px;
 }
+
+/* translate(calc(var(--cursorX)/50), calc(var(--cursorY)/15)) */
 
 section.movefromleft video, section.movefromright video {
     animation: video-text 0.8s ease-out; 
@@ -236,6 +238,12 @@ video:nth-child(2n) {
     margin-right: 0;
 }
 
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 aside:not(#header) {
     max-width: 347px;
 }
@@ -249,8 +257,10 @@ aside h3 {
 }
 
 aside .link-github {
+    position: relative;
     display: flex;
     align-items: center;
+    flex-shrink: 1;
     text-decoration: none;
     font-size: var(--subtitle01-link);
     line-height: 110%;
@@ -261,6 +271,23 @@ aside .link-github {
 
 aside .link-github img {
     margin-right: 12px;
+}
+
+aside .link-github::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 241, 229, 0.8);
+    transform: translateY(15px);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+aside .link-github:hover::before {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 #contact {
@@ -308,6 +335,10 @@ aside .link-github img {
     margin-bottom: 16px;
 }
 
+#contact div {
+    position: relative;
+}
+
 #contact div a {
     width: 38px;
     height: 38px;
@@ -315,8 +346,35 @@ aside .link-github img {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 1px solid rgba(230, 218, 207, 0.48);
+    border: 1px solid rgb(230, 218, 207);
     margin-right: 16px;
+    opacity: 0.7;
+}
+
+#contact div a:hover {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#contact div:last-of-type p {
+    position: absolute;
+    top: 40px;
+    left: 26px;
+    opacity: 0;
+    font-size: 12px;
+}
+
+.copied {
+    animation: copied 1s ease-in-out;
+}
+
+@keyframes copied {
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -397,6 +455,10 @@ aside .link-github img {
 
     #contact div p:last-of-type {
         margin-bottom: 40px;
+    }
+
+    #contact div:last-of-type p {
+        left:-35px;
     }
 
 }
