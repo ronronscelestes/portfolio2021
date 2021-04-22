@@ -364,10 +364,15 @@ aside .link-github:hover::before {
 
 #contact div:last-of-type p {
     position: absolute;
-    top: 45px;
-    left: 22px;
+    top: 50px;
+    left: 42px;
     opacity: 0;
-    font-size: 12px;
+    font-size: 14px;
+    background-color: rgba(23, 23, 23, 1);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 1);
+    padding: 6px;
+    width: 60px;
+    text-align: center;
 }
 
 .copied {
@@ -464,10 +469,6 @@ aside .link-github:hover::before {
 
     #contact div p:last-of-type {
         margin-bottom: 40px;
-    }
-
-    #contact div:last-of-type p {
-        left:-35px;
     }
 
 }
