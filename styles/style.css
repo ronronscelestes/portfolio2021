@@ -108,7 +108,6 @@ body {
 
 #header {
     transform: translateY(-20%);
-    /* max-width: 80%; */
     animation: appear 2s ease-in-out;
 }
 
@@ -244,12 +243,6 @@ video:nth-child(2n) {
 }
 
 aside:not(#header) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-aside:not(#header) {
     max-width: 347px;
 }
 
@@ -377,7 +370,7 @@ aside .link-github:hover::before {
 
 .copied {
     text-transform: uppercase;
-    animation: copied 1s ease-in-out;
+    animation: copied 1.5s ease-in-out;
 }
 
 @keyframes copied {
@@ -404,6 +397,7 @@ aside .link-github:hover::before {
         max-width: 150px;
         position: initial;
         order: -1;
+        margin-bottom: 40px;
     } 
 
     #line {
@@ -424,6 +418,9 @@ aside .link-github:hover::before {
 
     aside:not(#header) {
         max-width: 100%;
+    }
+
+    aside {
         display: flex;
         flex-direction: column;
         align-items: center;

@@ -90,7 +90,7 @@ resume.addEventListener('click', (e) => {
     copiedNode.classList.add('copied');
     setTimeout(() => {
         copiedNode.className = '';
-    }, 1000);
+    }, 1500);
 
     navigator.clipboard.writeText('julie.plantey@gmail.com');
 })
