@@ -242,6 +242,12 @@ video:nth-child(2n) {
     margin-right: 0;
 }
 
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 aside:not(#header) {
     max-width: 347px;
 }
@@ -421,8 +427,6 @@ aside .link-github:hover::before {
     }
 
     aside {
-        display: flex;
-        flex-direction: column;
         align-items: center;
     }
 
