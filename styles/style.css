@@ -182,7 +182,7 @@ section h2 {
     font-size: var(--heading01);
     line-height: 110%;
     letter-spacing: -0.025em;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     user-select: none;
 }
 
@@ -257,7 +257,26 @@ aside h3 {
     line-height: 28px;
     letter-spacing: -0.025em;
     color: rgba(230, 218, 207, 0.7);
-    margin-bottom: 40px;
+    margin-bottom: 24px;
+}
+
+aside h3 a {
+    text-decoration: none;
+    color: rgba(230, 218, 207, 0.9);
+    position: relative;
+}
+
+aside h3 a:hover::before {
+    opacity: 1;
+    transform: translateY(5px);
+}
+
+aside p {
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    color: rgba(230, 218, 207, 0.48);
+    font-size: 17px;
+    line-height: 22px;
 }
 
 aside .link-github {
@@ -278,7 +297,7 @@ aside .link-github img {
     width: 18px;
 }
 
-aside .link-github::before {
+aside .link-github::before, aside h3 a::before {
     content: '';
     position: absolute;
     top: 25px;
@@ -363,7 +382,7 @@ aside .link-github:hover::before {
 
 #contact div:last-of-type p {
     position: absolute;
-    top: 50px;
+    top: -40px;
     left: 42px;
     opacity: 0;
     font-size: 14px;
