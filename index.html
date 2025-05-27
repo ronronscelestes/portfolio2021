@@ -6,6 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
     <!-- Primary Meta Tags -->
     <title>Julie Plantey</title>
     <meta name="title" content="Julie Plantey" />
@@ -30,85 +35,70 @@
 <body>
     <div id="background-container"></div>
 
-    <section class="left">
-        <aside id="header">
-            <h1>hi! glad you're here</h1>
-            <h2>I’m Julie, I develop <br> web products</h2>
-            <p>I'm passionate about front-end technologies and crafting useful, elegant products. Currently working as a Front-end developer at Strapi!</p>
-            <p>I also love cats and video games, but we can talk about that later</p>
-        </aside>
-        <img id="hello-hand" src="./styles/images/hand.svg" alt="hand waving hello">
-    </section>
-
-    <div id="projects-container">
-        <div id="line"></div>
-
-        <section class="right">
-            <video loop src="./styles/images/Coleap.mp4" alt="project coleap" muted="muted"></video>
-
-            <aside>
-                <h2>Coleap</h2>
-                <p>role: front-end</p>
-                <h3>React.js, Next.js, Contentful API with the <a href="https://dreamersofdrea.ms/" target="_blank">dreamers</a> collective</h3> 
-                <a href="https://coleap.com/" target="_blank" class="link-github">
-                    <img src="./styles/images/github-Icon.svg" alt="">
-                    see the project live
-                </a>
-            </aside>
-        </section>
-
-        <section class="left">
-            <aside>
-                <h2>Centre LGBTQI+</h2>
-                <p>role: full-stack</p>
-                <h3>MongoDB, Express.js, React.js, Node.js and the lovely RuPaul</h3>
-                <a href="https://github.com/benpin31/LGBT-center-client" target="_blank" class="link-github">
-                    <img src="./styles/images/github-Icon.svg" alt="">
-                    see the project on github
-                </a>
-            </aside>
-
-            <video loop src="./styles/images/Seq_LGBTQI.mp4" alt="project centre lgbtqi+ ile de france" muted="muted"></video>
-        </section>
-
-        <section class="right">
-            <video loop src="./styles/images/Seq_Powerup.mp4" alt="project power up" type="video/mp4" muted="muted"></video>
-
-            <aside>
-                <h2>PowerUp</h2>
-                <p>role: full-stack</p>
-                <h3>MongoDB, Node.js, Express.js, JavaScript and videos games </h3>
-                <a href="https://github.com/ronronscelestes/PowerUp" target="_blank" class="link-github">
-                    <img src="./styles/images/github-Icon.svg" alt="">
-                    see the project on github
-                </a>
-            </aside>
-        </section>
-
-        <section class="left">
-            <aside>
-                <h2>A day in a cat’s life</h2>
-                <p>role: front-end</p>
-                <h3>JavaScript, cats and sprinkles</h3>
-                <a href="https://github.com/ronronscelestes/dayInCatLife" target="_blank" class="link-github">
-                    <img src="./styles/images/github-Icon.svg" alt="">
-                    see the project on github
-                </a>
-            </aside>
-
-            <video loop src="./styles/images/Seq_CatsLife.mp4" alt="project a day in a cat life" muted="muted"></video>
-        </section>
-    </div>
-
-    <section id="contact" class="left">
-        <p>I solve problems through code</p>
-        <div>
-            <p>Up until 2020, I worked as a psychologist. I decided to join Ironhack's web development bootcamp program after dabbling with code for a few months by myself: throughout this intensive course, I learned to build full stack apps and discovered a strong interest for the front-end side of every project.</p>
+    <main>
+        <section class="intro">
+            <div class="tag">
+                <span class="green-dot"></span>
+                <p class="font-sections font-section-header-color">Looking to join a cool remote team</p>
+            </div>
             
-            <p>During my training, I was lucky enough to meet and work with people with various background and interests. I'm currently a Front-end developer working on an open-source headless CMS, Strapi!</p>
-        </div>
-        <h2>Interested in collaborating?</h2>
-        <p>check out my profiles and feel free to reach out!</p>
+            <div class="intro-header">
+                <h1 class="font-titles">Julie Plantey • Frontend Software Engineer</h1>
+                <h2 class="font-header">Thoughtful code for valuable products</h3>
+            </div>
+
+            <div class="intro-text">
+                <p class="font-paragraphs">I became a front-end engineer in 2021, after working as clinical psychologist in a previous life.</p>
+                <p class="font-paragraphs">Since then, I worked at Strapi & Futura Gaïa, where I became passionate about crafting useful products, design systems, and accessibility.</p>
+            </div>
+        </section>
+
+        <section class="stack">
+            <h3 class="font-sections font-section-color">My stack</h3>
+            <p class="font-paragraphs">React • CSS modules • tanstack/react-query • Jest/Playwright</p>
+        </section>
+
+        <section class="contact">
+            <h3 class="font-sections font-section-color">Learn more</h3>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/julieplantey/" target="_blank">
+                    <img src="./styles/images/linkedin-icon.svg" alt="linkedin link">
+                </a>
+                <a id="resume" href="" target="_blank">
+                    <img src="./styles/images/mail-icon.svg" alt="copy email">
+                </a>
+                <a href="https://drive.google.com/file/d/1jD57uGUVhmr6rFEK7tjD_V7Em-y__iRk/view" target="_blank">
+                    <img src="./styles/images/CV-icon.svg" alt="resume link">
+                </a>
+                <a href="https://github.com/ronronscelestes" target="_blank">
+                    <img src="./styles/images/github-Icon.svg" alt="github link">
+                </a>
+            </div>
+        </section>
+
+        <section class="experiences">
+            <h3 class="font-sections font-section-color">Work experience</h3>
+            <div class="container">
+                <div class="experience">
+                    <h4 class="font-titles">Futura Gaïa, Senior Front-end developer</h4>
+                    <p class="font-subtitles">remote - 2023 → 2025 (1 year 10 months)</p>
+                    <p class="font-paragraphs">Main application refactor: created and implemented a design system, standardized code practices. Created a new application for agronomists and co-led the product requirement definition phase.</p>
+                </div>
+                <div class="experience">
+                    <h4 class="font-titles">Strapi, Front-end developer</h4>
+                    <p class="font-subtitles">remote - 2021 → 2023 (1 year 9 months)</p>
+                    <p class="font-paragraphs">Took part in the Strapi V4 integration, elaboration and development of features for content-editors, creation and maintenance of the design system.</p>
+                </div>
+                <div class="experience">
+                    <h4 class="font-titles">Dreamers of dreams, Freelance Front-end developer</h4>
+                    <p class="font-subtitles">remote - 2021</p>
+                    <p class="font-paragraphs">Front-end development of websites using React, Next, Prismic and Contentful, in partnership with dreamersofdrea.ms collective.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- <section id="contact" class="contact">
         <div>
             <a href="https://www.linkedin.com/in/julieplantey/" target="_blank">
                 <img src="./styles/images/linkedin-icon.svg" alt="linkedin link">
@@ -122,9 +112,9 @@
             <a href="https://github.com/ronronscelestes" target="_blank">
                 <img src="./styles/images/github-Icon.svg" alt="github link">
             </a>
-            <p>copied</p>
+            <p class="email-copied">copied</p>
         </div>
-    </section>
+    </section> -->
     
 </body>
 </html>
