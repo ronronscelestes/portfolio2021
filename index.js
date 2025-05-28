@@ -13,14 +13,14 @@ document.addEventListener('mousemove',update)
 
 //COPY CV-RESUME
 const resume = document.querySelector('#resume');
-// const copiedNode = document.querySelector('#contact div:last-of-type p');
+const copiedNode = document.querySelector('.copied');
 
 resume.addEventListener('click', (e) => {
     e.preventDefault();
-    // copiedNode.classList.add('copied');
-    // setTimeout(() => {
-    //     copiedNode.className = '';
-    // }, 1500);
+    copiedNode.classList.add('copied-active');
+    setTimeout(() => {
+        copiedNode.className = 'font-sections copied';
+    }, 1500);
 
     navigator.clipboard.writeText('julie.plantey@gmail.com');
 })
